@@ -74,16 +74,17 @@ def main():
     result=[]
     # jsonResult=[]
     jsonRes = getInterSectionInfo()         #code 2
+    # cnt = 1
 
-
-    print(jsonRes)
-    for item in jsonRes['getCrossCartypeTrafficVolumeList']['item']:
-        getInterSectionService(item, result)     #code 3
+    # while 
+    # print(jsonRes)
+    # for item in jsonRes['getCrossCartypeTrafficVolumeList']['item']:
+    # getInterSectionService(item, result)     #code 3
 
     
 
     with open(f'./교차로통행량정보테스트.json', mode='w', encoding='utf-8') as outfile:
-        jsonFile = json.dumps(result, indent=4, sort_keys=True, ensure_ascii=False)
+        jsonFile = json.dumps(jsonRes, indent=4, sort_keys=True, ensure_ascii=False)
         outfile.write(jsonFile)
     
 
