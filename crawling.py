@@ -64,7 +64,7 @@ def getInterSectionService(item, result):
                 
                 result.append({'방면':ISTL_LCTN,'수집일시':CLCT_DT,'교차로명':IXR_NM,'대형':SUM_LRGTFVL,'중형':SUM_MDDLTFVL,'소형':SUM_SMALTFVL,'경도':X_CRDN,'위도':Y_CRDN})
 
-    # return result
+    return result
 
 
 
@@ -76,14 +76,34 @@ def main():
     jsonRes = getInterSectionInfo()         #code 2
 
 
-    # print(jsondata)
-    for item in jsonRes['item']:
-        getInterSectionService(item, result)        #code 3
+    print(jsonRes)
+    for item in jsonRes['getCrossCartypeTrafficVolumeList']['item']:
+        getInterSectionService(item, result)     #code 3
 
+    
 
     with open(f'./교차로통행량정보테스트.json', mode='w', encoding='utf-8') as outfile:
         jsonFile = json.dumps(result, indent=4, sort_keys=True, ensure_ascii=False)
         outfile.write(jsonFile)
+    
+
+
+# def main():
+#     result=[]
+#     # jsonResult=[]
+#     jsonRes = getInterSectionInfo()         #code 2
+
+
+#     # print(jsonRes)
+#     for item in jsonRes['getCrossCartypeTrafficVolumeList']['item']:
+#         getInterSectionService(item, result)     #code 3
+
+#     # print(result)
+#     df = pd.DataFrame(result)
+#     df.to_csv('cross.csv', encoding='utf-8', index=False)
+#     print(df)
+
+
 
 
 if __name__ == '__main__':
