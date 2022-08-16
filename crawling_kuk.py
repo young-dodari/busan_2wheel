@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import datetime
 
-serviceKey = 'vTfdXtGsny7xRerwunqDq1PezLyeNmoFmRIx2YwnlYV4sA8EZfBl%2BKsVcjjugqAkuFX1KCdo4lag3L91sHFX%2BQ%3D%3D'
+serviceKey = 'dfZE3xbEeRwk%2FuM8jwETwtbeq9PBoyGUt7PTx9Kp3h92vgyvrA6N7%2FOjdlpaki5ssQak9Zquvbgwl%2BKyUtkJ4A%3D%3D'
 
 # code 1
 def getRequestUrl(url):
@@ -27,7 +27,7 @@ def getRequestUrl(url):
 # code 2
 def getInterSectionInfo(cnt):
     service_url = 'http://apis.data.go.kr/6260000/CrossCartypeTrafficeVolumeService/getCrossCartypeTrafficeVolumeList'
-    params = f'?serviceKey={serviceKey}&numOfRows=200&resultType=json&CLCT_DT=201809051205' # 인증키
+    params = f'?serviceKey={serviceKey}&numOfRows=150000&resultType=json&CLCT_DT=201809051205' # 인증키
 
     params += f'&pageNo={cnt}'
 
