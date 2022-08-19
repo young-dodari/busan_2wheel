@@ -33,7 +33,9 @@
       - 서울특별시 빅데이터 캠퍼스 공모전 분석사례 중 2021년 우수상 수상작 [이륜차 사고 데이터 분석을 통한 사고발생구역 및 취약지예측] 보고서
       - 류찬희,'배달의 시대, 이륜차 교통사고 8.5% 늘어' ,서울신문, 2022년 8월 4일자 기사  
  ### - 분석툴 
-        ![tool](./사진/tool.png)
+ ![tool1](https://user-images.githubusercontent.com/108312240/185545721-6adcd2bd-3570-4bbd-a6c0-07a422d0329a.png)
+ ![tool2](https://user-images.githubusercontent.com/108312240/185545715-81430730-123f-412a-bd32-be25aac153f5.png)
+
         
  ### - 사용데이터 
    |번호|데이터명|활용목적|출처|
@@ -44,16 +46,3 @@
    |4| 서울시 행정구역 (동별) 통계| 행정동별 도로면적 산출 |서울 열린빅데이터광장|
    |5| 이륜차 교통사고 데이터| 행정동별 지표파악 |TAAS(교통사고분석시스템)|
    |6| 이륜차 사고다발구역 데이터| QGIS 사용 |TAAS(교통사고분석시스템)|
-
- 
- ## 출처 
- https://www.seoul.co.kr/news/newsView.php?id=20220804009027
-
-  ![이미지이름](./파일경로)
-    
-### <div align=left><h1>📚 STACKS</h1></div>
-
-<div align=left> 
-  <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
-  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">      
-   
