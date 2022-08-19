@@ -16,7 +16,7 @@
       - 변수들 간 범위를 맞추기 위한 Min-Max 정규화 실행, 0과 1사이의 값으로 스케일링 
  ### 3. 상관관계분석 (Pearson, 시각화)
       - Hit map 및 산점도 시각화로 변수간 상관관계 분석
- ### 4. 결론도출 (K-means clustering, elbow method, 지도시각화, ) 
+ ### 4. 결론도출 (K-means clustering, elbow method, 지도시각화, Hierarchial Clustering) 
       - 중상자수와 가장 높은 상관관계를 보였던 상위변수 3개를 선택하여 군집화 진행
       - 적절한 군집수를 찾기위한 'elbow method' 사용
       - 중상자와 가장 높은 상관도를 보이는 군집 선정 
