@@ -1,63 +1,59 @@
-# 프로젝트 명
- - 2022년 서울시 이륜차 사고 데이터 분석을 통한 사고발생구역 및 취약지 예측  
-
-# 기획배경 (프로젝트 소개)
- - 지난 5년 간 서울시 전체 교통사고 건수는 감소하는 반면 이륜차 교통사고 건수는 되레 증가 
- - 교통사고 사망자 수 역시 30%이상 감소했으나 이륜차 사고 사망자가 차지하는 비중은 오히려 증가 
+## Ⅰ. 프로젝트 명
+ - 2022년 서울시 이륜차 사고 데이터 분석을 통한 사고발생구역 및 취약지 파악   
+    
+    
+## Ⅱ. 기획배경
+ - 지난 5년 간 서울시 전체 교통사고 건수 및 사망자수 감소 대비 이륜차 교통사고 건수 및 사망자 비중 증가
+ - 코로나로 인한 배달 수요의 증가로 이륜차 등록대수 증가 추세 지속  
  - 이륜차 택배와 소화물 배송대행 관련 시장이 새롭게 정착됨에 따라 새로운 안전관련 제도 및 시스템을 마련할 필요성 증대 
- - 이륜차 사고 데이터 분석을 통한 사고 발생구역 및 취약지 예측을 통해 이륜차 사고율 감소에 기여 
+ - 본 프로젝트를 통해 이륜차 사고 데이터 분석을 통해 사고발생구역 및 취약지 분석, 서울시의 이륜차 사망자 수를 감소시키고자 함   
+    
+ 
+## Ⅲ. 데이터 분석 프로세스  
+ ### 1. 데이터 수집 
+      - 서울시 행정동별 인구데이터(1인가구/생활인구 수), 이륜차 교통사고 데이터, 도로형태 데이터 
+ ### 2. 데이터 전처리 (Min-Max 정규화)
+      - 이륜차 사고발생에 영향을 주는 변수 선정을 위한 데이터 정제 및 통합
+      - 변수들 간 범위를 맞추기 위한 Min-Max 정규화 실행, 0과 1사이의 값으로 스케일링 
+ ### 3. 상관관계분석 (Pearson, 시각화)
+      - Hit map 및 산점도 시각화로 변수간 상관관계 분석 
+ ### 4. 결론도출 (K-Kmeans clustering, elbow method, 지도시각화) 
+      - 중상자수와 가장 높은 상관관계를 보였던 상위변수 3개를 선택하여 군집화 진행
+      - 적절한 군집수를 찾기위한 'elbow method' 사용
+      - 중상자와 가장 높은 상관도를 보이는 군집 선정 
+      - 최종선정된 군집의 이륜차 사고다발 구역좌표를 지도에 나타내어 취약지 파악     
+      
+ ## Ⅳ.결론(기대효과)
+  - 이륜차 사고 현황 개선 및 예방책 구현에 도움을 줄 수 있음
+  - 타지역에 적용하여 취약지 예측에 사용가능 
+ 
+ ## Ⅴ. 참고문헌 및 사용데이터 
+ 
+ ### - 참고문헌 
+      - 서울특별시 빅데이터 캠퍼스 공모전 분석사례 중 2021년 우수상 수상작 [이륜차 사고 데이터 분석을 통한 사고발생구역 및 취약지예측] 보고서
+      - 류찬희,'배달의 시대, 이륜차 교통사고 8.5% 늘어' ,서울신문, 2022년 8월 4일자 기사  
+ ### - 분석툴 
+        ![tool](./사진/tool.png)
+        
+ ### - 사용데이터 
+   |번호|데이터명|활용목적|출처|
+   |:--:|---|---|---|
+   |1| 서울시 행정동 단위 생활인구 데이터 |행정동별 생활인구 파악 |서울특별시 빅데이터 캠퍼스|
+   |2| 서울시 가구원수별 가구수 통계| 행정동별 1인가구수 파악 |서울 열린빅데이터광장|
+   |3| 서울시 도로현황 (도로율) 통계| 행정동별 도로면적 산출 |서울 열린빅데이터광장| 
+   |4| 서울시 행정구역 (동별) 통계| 행정동별 도로면적 산출 |서울 열린빅데이터광장|
+   |5| 이륜차 교통사고 데이터| 행정동별 지표파악 |TAAS(교통사고분석시스템)|
+   |6| 이륜차 사고다발구역 데이터| QGIS 사용 |TAAS(교통사고분석시스템)|
 
-# 기술스택 
-<div align=left><h1>📚 STACKS</h1></div>
+ 
+ ## 출처 
+ https://www.seoul.co.kr/news/newsView.php?id=20220804009027
+
+  ![이미지이름](./파일경로)
+    
+### <div align=left><h1>📚 STACKS</h1></div>
 
 <div align=left> 
   <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
-  <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
-
-Give examples
-Installing
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-Give the example
-And repeat
-
-until finished
-End with an example of getting some data out of the system or using it for a little demo
-
-Running the tests
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-Explain what these tests test and why
-
-Give an example
-And coding style tests
-Explain what these tests test and why
-
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
-
-Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
-
-Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">      
+   
